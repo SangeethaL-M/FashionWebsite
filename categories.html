@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Website</title>
+    <!--Inheriting Font Style-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Inheriting CSS-->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--TailwindCSS-->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+<div class="overall">
+<div class="flex flex-wrap mt-2 justify-between bg-neutral-100 py-4 px-4">
+    <div class="logo text-[20px] md:[24px] lg:[28px] p-1">Fashion World</div>
+    <div class="flex justify-between text-[20px] md:[24px] lg:[28px] tracking-wider">
+        <nav>
+            <div class="lg:hidden py-1">
+                <button id="menu-btn" class="flex-shrink-0 text-[16px] ">
+                    ☰
+                </button>
+            </div>
+            <div class="flex justify-evenly">
+                <ul id="menu" class="hidden  w-full  p-4 flex-col gap-4 lg:static lg:p-0 lg:flex lg:flex-row lg:space-x-12 lg:gap-0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html" class="bg-[#FF7E67] text-white px-6 py-2 rounded-lg">Categories</a></li>
+                    <li> <a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </div> 
+     <div class="flex justify-between text-[20px] md:[24px] lg:[28px] tracking-wider sm:space-x-8">
+        <button onclick="toggleCart()" class="relative">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="absolute -top-2 -right-2 bg-[#FF7E67] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+        <button onclick="toggleUser()" class="hover:text-zinc-500 transition-colors">
+            <i class="bi bi-person-circle"></i>
+        </button>
+
+        <button onclick="toggleLogin()" class="bg-zinc-800 text-white px-8 py-2 rounded-xl text-lg font-semibold hover:bg-black transition-colors">
+            Login
+        </button>
+    </div>
+</div>
+
+<!--Categories-->
+
+<div class="max-w-7xl mx-auto px-6 py-8">
+  <div class="flex items-center gap-2 text-xl mb-10 border-b pb-4">
+    <button class="top-filter active-text text-[#FF7E67]" data-type="All">All /</button>
+    <button class="top-filter text-zinc-400 hover:text-[#FF7E67]" data-type="Modern">Modern /</button>
+    <button class="top-filter text-zinc-400 hover:text-[#FF7E67]" data-type="Traditional">Traditional /</button>
+    <button class="top-filter text-zinc-400 hover:text-[#FF7E67]" data-type="Casual">Casual /</button>
+    <button class="top-filter text-zinc-400 hover:text-[#FF7E67]" data-type="Formals">Formals</button>
+  </div>
+
+  <div class="flex gap-10">
+    <aside class="w-64 flex-shrink-0">
+      <div class="border rounded-xl p-6 mb-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">categories</h2>
+        <ul class="space-y-4 text-center text-xl font-semibold">
+          <li class="side-filter cursor-pointer bg-zinc-200 py-2 rounded-lg" data-cat="All">All</li>
+          <li class="side-filter cursor-pointer text-zinc-600 hover:bg-zinc-100 py-2 rounded-lg" data-cat="Men">Men</li>
+          <li class="side-filter cursor-pointer text-zinc-600 hover:bg-zinc-100 py-2 rounded-lg" data-cat="Women">Women</li>
+          <li class="side-filter cursor-pointer text-zinc-600 hover:bg-zinc-100 py-2 rounded-lg" data-cat="Kids">Kids</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-6 text-center">Size</h2>
+        <div class="grid grid-cols-2 gap-3" id="size-container">
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">S</button>
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">L</button>
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">M</button>
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">XL</button>
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">XXL</button>
+          <button class="size-btn border rounded-xl py-3 text-lg font-bold transition-all">XXXL</button>
+        </div>
+      </div>
+    </aside>
+
+    <main id="product-grid" class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </main>
+  </div>
+</div>
+
+<!--Footer-->
+<footer class="footer ">
+  <div class="footer-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+    
+    <div class="footer-column brand-info">
+      <h2 class="footer-logo">LUXE.</h2>
+      <p>Premium fashion for the modern connoisseur. Elevate your style with our curated collections.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Help</h3>
+      <ul>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Find a Store</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>About</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Corporate Responsibility</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+<!--Closing overall-->
+</div>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<script src="Assets/js/script.js"></script>
+
+
+<div id="loginModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+<div class="absolute inset-0 bg-black/50" onclick="toggleLogin()"></div>
+    <div class="relative bg-white w-full max-w-lg rounded-[2rem] p-10 shadow-2xl border border-zinc-100 font-['Roboto']">
+        <button onclick="toggleLogin()" class="absolute top-6 right-8 text-2xl text-zinc-800 hover:scale-110 transition-transform">
+            ✕
+        </button>
+
+        <div class="text-center mb-10">
+            <h2 class="text-5xl font-black tracking-tight text-zinc-900 uppercase">Login</h2>
+            <p class="text-zinc-500 text-lg mt-4">How do I started lorem Ipsum dolor At?</p>
+        </div>
+
+        <div class="space-y-4">
+            <input type="text" placeholder="Username" class="w-full bg-zinc-100 py-5 px-6 rounded-2xl outline-none focus:ring-2 focus:ring-[#FF7E67]/20">
+            <input type="password" placeholder="Password" class="w-full bg-zinc-100 py-5 px-6 rounded-2xl outline-none focus:ring-2 focus:ring-[#FF7E67]/20">
+            <button class="w-full bg-[#FF7E67] text-white py-4 rounded-2xl text-2xl font-bold shadow-lg shadow-orange-200">
+                Login
+            </button>
+        </div>
+
+        <div class="relative my-10 flex items-center justify-center">
+            <div class="absolute inset-x-0 h-px bg-zinc-200"></div>
+            <span class="relative bg-white px-4 text-sm text-zinc-400">or continue with</span>
+        </div>
+
+        <div class="space-y-4">
+      <button class="w-full bg-zinc-100 py-4 rounded-2xl flex items-center justify-center gap-4 font-bold text-zinc-800 hover:bg-zinc-200 transition-all">
+        <i class="bi bi-google text-xl text-red-500"></i> Continue with google
+      </button>
+
+      <button class="w-full bg-zinc-100 py-4 rounded-2xl flex items-center justify-center gap-4 font-bold text-zinc-800 hover:bg-zinc-200 transition-all">
+        <i class="bi bi-apple text-2xl"></i> Continue with Apple
+      </button>
+    </div>
+    </div>
+
+</div>
+
+<div id="userModal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/60" onclick="toggleUser()"></div>
+
+    <div class="relative bg-white w-full max-w-xl rounded-[2rem] overflow-hidden shadow-2xl z-[120]">
+        
+        <div class="w-full p-10 md:p-12 relative bg-white">
+            <button onclick="toggleUser()" class="absolute top-6 right-8 text-2xl text-zinc-800">✕</button>
+
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-light text-zinc-900 mb-2 font-['Roboto']">Welcome to</h2>
+                <h3 class="text-xl font-bold text-zinc-900 uppercase font-['Roboto']">Luxury Fashion World</h3>
+            </div>
+
+            <div class="space-y-6">
+                <p class="text-zinc-500 text-center text-lg font-['Roboto']">Please Enter Your Mobile Number</p>
+                
+                <div class="flex items-center bg-zinc-100 rounded-2xl p-2 border border-zinc-200">
+                    <div class="flex items-center px-4 gap-2 border-r border-zinc-300">
+                        <i class="bi bi-telephone text-xl text-zinc-400"></i>
+                        <span class="font-bold text-lg text-zinc-700 font-['Roboto']">+91</span>
+                    </div>
+                    <input type="text" placeholder="Mobile number" class="w-full bg-transparent py-4 px-6 outline-none text-lg">
+                </div>
+
+                <div class="text-right">
+                    <button class="text-zinc-900 font-bold hover:underline font-['Roboto']">Use E-Mail</button>
+                </div>
+<div class="text-zinc-500 text-[13px] space-y-2 leading-relaxed">
+                    <p class="font-['Roboto']">This site is protected by reCAPTCHA and the Google 
+                        <a href="#" class="underline">Privacy Policy</a> and <a href="#" class="underline">Terms of Service</a> apply.
+                    </p>
+                    <p class="font-['Roboto']">On Clicking Continue, I agree to 
+                        <a href="#" class="underline">Terms of Service</a> & <a href="#" class="underline">Privacy Policy</a>
+                    </p>
+                </div>
+                <button class="w-full bg-[#FF7E67] text-white py-4 rounded-2xl text-2xl font-bold shadow-lg shadow-orange-200 mt-6 font-['Roboto']">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--SIDE cart-->
+<div id="cartSidebar" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-[200] transform translate-x-full transition-transform duration-300 flex flex-col font-['Roboto']">
+    <div class="p-6 border-b flex justify-between items-center bg-zinc-900 text-white">
+        <h2 class="text-xl font-bold">Your Cart</h2>
+        <button onclick="toggleCart()" class="text-2xl hover:text-[#FF7E67]">✕</button>
+    </div>
+
+    <div id="sidebarItemList" class="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-50">
+        </div>
+
+    <div class="p-6 border-t bg-white">
+        <div class="flex justify-between font-bold text-xl mb-6">
+            <span>Total:</span>
+            <span id="sidebarTotal" class="text-[#FF7E67]">$0.00</span>
+        </div>
+        <button onclick="proceedToCheckout()" class="w-full bg-zinc-900 text-white py-4 rounded-xl font-bold">Checkout</button>
+    </div>
+</div>
+
+<div id="cartOverlay" class="fixed inset-0 bg-black/50 z-[190] hidden" onclick="toggleCart()"></div>
+
+</body>
+</html>

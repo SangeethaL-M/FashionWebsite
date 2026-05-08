@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2663.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 2,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 2000,
+    "image": "Assets/images/Frame 2664.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 3,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2665.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 4,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2668.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 5,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 2000,
+    "image": "Assets/images/Frame 2687.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 6,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2696.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 7,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2697.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 8,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 2000,
+    "image": "Assets/images/Frame 2698.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 9,
+    "name": "T-Shirt & jean",
+    "type": "Formals",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2699.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 10,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2701.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 11,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2702.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 12,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 2000,
+    "image": "Assets/images/Frame 2703.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 13,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2704.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 14,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2705.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 15,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Men",
+    "price": 2000,
+    "image": "Assets/images/Frame 2706.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 16,
+    "name": "Saree",
+    "type": "Traditional",
+    "category": "Women",
+    "price": 450,
+    "image": "Assets/images/Frame 2799.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 17,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Men",
+    "price": 800,
+    "image": "Assets/images/Frame 2800.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 18,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 2000,
+    "image": "Assets/images/Frame 2801.jpg",
+    "description": "Traditional wear"
+  },
+  {
+    "id": 19,
+    "name": "T-Shirt & jean",
+    "type": "Traditional",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2802.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 20,
+    "name": "Saree",
+    "type": "Traditional",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2803.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 21,
+    "name": "Saree",
+    "type": "Traditional",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2804.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 22,
+    "name": "T-Shirt & jean",
+    "type": "Formals",
+    "category": "Women",
+    "price": 450,
+    "image": "Assets/images/Frame 2805.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 23,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2806.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 24,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2807.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 25,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 450,
+    "image": "Assets/images/Frame 2808.jpg",
+    "description": "Playful wear"
+  },
+  {
+    "id": 26,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2809.jpg",
+    "description": "Festival wear"
+  },
+  {
+    "id": 27,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2810.jpg",
+    "description": "Festival wear"
+  },
+  {
+    "id": 28,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2811.jpg",
+    "description": "Festival wear"
+  },
+  {
+    "id": 29,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Women",
+    "price": 800,
+    "image": "Assets/images/Frame 2812.jpg",
+    "description": "Festival wear"
+  },
+  {
+    "id": 30,
+    "name": "T-Shirt & jean",
+    "type": "Modern",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2813.jpg",
+    "description": "Festival wear"
+  },
+   {
+    "id": 31,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2814.jpg",
+    "description": "Casual wear"
+  },
+   {
+    "id": 32,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2815.jpg",
+    "description": "Casual wear"
+  },
+   {
+    "id": 33,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Kids",
+    "price": 800,
+    "image": "Assets/images/Frame 2816.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 34,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 800,
+    "image": "Assets/images/Frame 2817.jpg",
+    "description": "Casual wear"
+  },
+  {
+    "id": 35,
+    "name": "T-Shirt & jean",
+    "type": "Casual",
+    "category": "Men",
+    "price": 800,
+    "image": "Assets/images/Frame 2818.jpg",
+    "description": "Casual wear"
+  }
+]

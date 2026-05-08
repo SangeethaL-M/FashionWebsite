@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+.overall
+{
+    width:90%;
+    margin: auto;
+    font-family: 'Roboto';
+}
+.logo {
+  /* Using Montserrat as the primary choice */
+  font-family: 'Grandstander', sans-serif;
+  
+  /* Bold weight for that 'Fashion World' look */
+  font-weight: 200; 
+  
+  /* Modern logos always use letter-spacing to feel premium */
+  letter-spacing: 1.5px; 
+  
+  /* Slightly larger than nav links */
+  
+  
+  text-transform: capitalize; /* Matches your 'Fashion World' casing */
+  color: #000;
+  cursor: pointer;
+}
+
+/*Footer*/
+/*------*/
+.footer {
+  background-color: #222; /* Dark background  */
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+}
+
+.brand-info {
+  flex: 2; /* Makes the logo section slightly wider */
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.brand-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #222;
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular icons */
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
+/*Section1*/
+/* Add this to your style.css if you want the images to move slightly */
+.rounded-sm img {
+  transition: transform 0.5s ease;
+}
+.rounded-sm:hover img {
+  transform: scale(1.1);
+}

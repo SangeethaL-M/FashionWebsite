@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Website</title>
+    <!--Inheriting Font Style-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Inheriting CSS-->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--TailwindCSS-->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+<div class="overall">
+<div class="flex flex-wrap mt-2 justify-between bg-neutral-100 py-4 px-4">
+    <div class="logo text-[20px] md:[24px] lg:[28px] p-1">Fashion World</div>
+    <div class="flex justify-between text-[20px] md:[24px] lg:[28px] tracking-wider">
+        <nav>
+            <div class="lg:hidden py-1">
+                <button id="menu-btn" class="flex-shrink-0 text-[16px] ">
+                    ☰
+                </button>
+            </div>
+            <div class="flex justify-evenly">
+                <ul id="menu" class="hidden  w-full  p-4 flex-col gap-4 lg:static lg:p-0 lg:flex lg:flex-row lg:space-x-12 lg:gap-0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li> <a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </div> 
+     <div class="flex justify-between text-[20px] md:[24px] lg:[28px] tracking-wider sm:space-x-8">
+        <button onclick="toggleCart()" class="relative">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="absolute -top-2 -right-2 bg-[#FF7E67] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+        <button onclick="toggleUser()" class="hover:text-zinc-500 transition-colors">
+            <i class="bi bi-person-circle"></i>
+        </button>
+
+        <button onclick="toggleLogin()" class="bg-zinc-800 text-white px-8 py-2 rounded-xl text-lg font-semibold hover:bg-black transition-colors">
+            Login
+        </button>
+    </div>
+</div>
+
+<!--section 1-->
+<section class="relative bg-white px-6 py-12 lg:px-20 lg:py-16 overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 font-['Roboto']">
+    
+    <div class="z-10">
+      <h1 class="text-4xl lg:text-6xl font-serif text-zinc-600 leading-tight mb-6 font-['Roboto']">
+        Elevate Your Style  This Season
+      </h1>
+      <p class="text-zinc-500 text-lg lg:text-2xl max-w-md mb-10 leading-relaxed">
+        Discover our new collection of premium fashion pieces designed for the modern connoisseur.
+      </p>
+      <button class="bg-[#FF6F61] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[#ff6b52] transition-all shadow-lg shadow-orange-200">
+        Go To Shop
+      </button>
+    </div>
+
+    <div class="relative flex items-end justify-center lg:justify-end gap-4 h-[500px] lg:h-[600px]">
+      
+      <div class="w-1/4 h-[80%] rounded-sm overflow-hidden self-end shadow-xl">
+        <img src="Assets/images/Frame 2656.jpg" alt="Fashion 1" class="w-full h-full object-cover">
+      </div>
+
+      <div class="w-1/4 h-[90%] rounded-sm overflow-hidden shadow-2xl self-center border-4 border-white">
+        <img src="Assets/images/Frame 2657.jpg" alt="Fashion 2" class="w-full h-full object-cover">
+      </div>
+
+      <div class="w-1/4 h-[80%] rounded-sm overflow-hidden self-end shadow-xl">
+        <img src="Assets/images/Frame 2658.jpg" alt="Fashion 3" class="w-full h-full object-cover">
+      </div>
+
+      <div class="w-1/4 h-[90%] rounded-sm overflow-hidden self-center shadow-lg">
+        <img src="Assets/images/Frame 2659.jpg" alt="Fashion 4" class="w-full h-full object-cover">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--Section2-->
+<section class="py-16 px-6 bg-white">
+  <div class="text-center mb-12 bg-neutral-200 p-1">
+    <h2 class="text-2xl md:text-5xl font-bold text-zinc-800 mb-2 font-['Roboto']">Shop By Category</h2>
+    <p class="text-zinc-500 font-['Roboto']">Curated collections for every occasion</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="categories.html">
+    <div class="group relative aspect-[3/4] w-full overflow-hidden rounded-sm cursor-pointer bg-zinc-200">
+      
+      <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/images/Default.jpg" alt="Modern" 
+             class="w-full h-full object-cover brightness-[70%] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-100">
+      </div>
+
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+        <div class="bg-white/40 backdrop-blur-sm py-3 w-full text-center">
+          <span class="text-xl font-normal tracking-wide text-zinc-900 font-['Roboto']">Modern</span>
+        </div>
+      </div>
+
+    </div>
+    </a>
+    <a href="categories.html">
+    <div class="group relative aspect-[3/4] w-full overflow-hidden rounded-sm cursor-pointer bg-zinc-200">
+      <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/images/Default1.jpg" alt="Casual" 
+             class="w-full h-full object-cover brightness-[70%] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-100">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+        <div class="bg-white/40 backdrop-blur-sm py-3 w-full text-center">
+          <span class="text-xl font-normal tracking-wide text-zinc-900 font-['Roboto']">Casual</span>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="categories.html">
+
+    <div class="group relative aspect-[3/4] w-full overflow-hidden rounded-sm cursor-pointer bg-zinc-200">
+      <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/images/Default2.jpg" alt="Traditional" 
+             class="w-full h-full object-cover brightness-[70%] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-100">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+        <div class="bg-white/40 backdrop-blur-sm py-3 w-full text-center">
+          <span class="text-xl font-normal tracking-wide text-zinc-900 font-['Roboto']">Traditional</span>
+        </div>
+      </div>
+    </div>
+    </a>
+        <a href="categories.html">
+    <div class="group relative aspect-[3/4] w-full overflow-hidden rounded-sm cursor-pointer bg-zinc-200">
+      <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/images/Default3.jpg" alt="Formal" 
+             class="w-full h-full object-cover brightness-[70%] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-100">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+        <div class="bg-white/40 backdrop-blur-sm py-3 w-full text-center">
+          <span class="text-xl font-normal tracking-wide text-zinc-900 font-['Roboto']">Formal</span>
+        </div>
+      </div>
+    </div>
+</a>
+  </div>
+</section>
+
+<!--Section 3-->
+
+
+<section class="max-w-8xl mx-auto px-6 py-12">
+  
+  <div class="relative w-full h-64 md:h-80 overflow-hidden mb-16 shadow-lg">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Assets/images/Rectangle 178.jpg');">
+    
+    </div>
+    
+    <div class="relative h-full flex items-center justify-center">
+      <h1 class="text-6xl md:text-8xl font-black text-zinc-900 tracking-tighter">
+        50% OFF
+      </h1>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-md bg-zinc-100">
+      <img src="Assets/images/Frame 2806.jpg" alt="Product" class="w-full h-full object-cover">
+      
+      <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+        
+        <div class="text-white mb-4">
+          <h3 class="text-xl font-bold leading-tight">T-Shirt</h3>
+          <p class="text-sm opacity-90">Cotton Cloths for Summer</p>
+        </div>
+        
+        <div class="flex items-center justify-between text-white mb-4">
+          <div class="flex items-center gap-1 font-bold">
+            <span>4</span>
+            <span class="text-yellow-400">★</span>
+          </div>
+          <span class="font-bold text-xl">$250</span>
+        </div>
+<a href="cart.html">
+        <button class="w-full bg-[#FF7E67] text-white py-3 rounded-xl font-bold hover:bg-[#ff6b52] transition-colors active:scale-95" onclick="addToCart()">
+          Buy Now
+        </button></a>
+      </div>
+    </div>
+
+     <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-md bg-zinc-100">
+      <img src="Assets/images/Frame 2664.jpg" alt="Product" class="w-full h-full object-cover">
+      
+      <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+        
+        <div class="text-white mb-4">
+          <h3 class="text-xl font-bold leading-tight">Scout</h3>
+          <p class="text-sm opacity-90">Cotton Cloths for Summer</p>
+        </div>
+        
+        <div class="flex items-center justify-between text-white mb-4">
+          <div class="flex items-center gap-1 font-bold">
+            <span>4</span>
+            <span class="text-yellow-400">★</span>
+          </div>
+          <span class="font-bold text-xl">$250</span>
+        </div>
+<a href="cart.html">
+
+        <button class="w-full bg-[#FF7E67] text-white py-3 rounded-xl font-bold hover:bg-[#ff6b52] transition-colors active:scale-95" onclick="addToCart()">
+          Buy Now
+        </button></a>
+      </div>
+    </div>
+
+     <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-md bg-zinc-100">
+      <img src="Assets/images/Frame 2665.jpg" alt="Product" class="w-full h-full object-cover">
+      
+      <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+        
+        <div class="text-white mb-4">
+          <h3 class="text-xl font-bold leading-tight">Gown</h3>
+          <p class="text-sm opacity-90">Cotton Cloths for Summer</p>
+        </div>
+        
+        <div class="flex items-center justify-between text-white mb-4">
+          <div class="flex items-center gap-1 font-bold">
+            <span>4</span>
+            <span class="text-yellow-400">★</span>
+          </div>
+          <span class="font-bold text-xl">$250</span>
+        </div>
+<a href="cart.html">
+
+        <button class="w-full bg-[#FF7E67] text-white py-3 rounded-xl font-bold hover:bg-[#ff6b52] transition-colors active:scale-95" onclick="addToCart()">
+          Buy Now
+        </button></a>
+      </div>
+    </div>
+
+     <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-md bg-zinc-100">
+      <img src="Assets/images/Frame 2807.jpg" alt="Product" class="w-full h-full object-cover">
+      
+      <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+        
+        <div class="text-white mb-4">
+          <h3 class="text-xl font-bold leading-tight">Top</h3>
+          <p class="text-sm opacity-90">Cotton Cloths for Summer</p>
+        </div>
+        
+        <div class="flex items-center justify-between text-white mb-4">
+          <div class="flex items-center gap-1 font-bold">
+            <span>4</span>
+            <span class="text-yellow-400">★</span>
+          </div>
+          <span class="font-bold text-xl">$250</span>
+        </div>
+<a href="cart.html">
+
+        <button class="w-full bg-[#FF7E67] text-white py-3 rounded-xl font-bold hover:bg-[#ff6b52] transition-colors active:scale-95" onclick="addToCart()">
+          Buy Now
+        </button></a>
+      </div>
+    </div>
+
+    </div>
+</section>
+
+<!--Section 4-->
+<section class="bg-white py-16 px-6 border-t border-zinc-100 ">
+  <div class="max-w-4xl mx-auto text-center">
+    
+    <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-3 font-['Roboto']">
+      Subscribe to Our Newsletter
+    </h2>
+    <p class="text-zinc-500 text-lg mb-10 font-['Roboto']">
+      Be the first to know about new collections and exclusive offers
+    </p>
+
+    <form class="flex flex-col sm:flex-row items-stretch justify-center gap-0 max-w-2xl mx-auto">
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        class="flex-grow px-6 py-4 bg-white border border-zinc-300 rounded-l-xl sm:rounded-r-none outline-none focus:border-zinc-500 transition-colors text-lg"
+        required
+      >
+      <button 
+        type="submit" 
+        class="bg-[#FF7E67] text-white px-10 py-4 rounded-r-xl sm:rounded-l-none font-bold text-lg hover:bg-[#ff6b52] transition-all active:scale-95 shadow-md shadow-orange-100"
+      >
+        Subscribe
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!--Footer-->
+<footer class="footer ">
+  <div class="footer-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+    
+    <div class="footer-column brand-info">
+      <h2 class="footer-logo">LUXE.</h2>
+      <p>Premium fashion for the modern connoisseur. Elevate your style with our curated collections.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Help</h3>
+      <ul>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Find a Store</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>About</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Corporate Responsibility</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+<!--Closing overall-->
+</div>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<script src="Assets/js/script.js"></script>
+
+
+<div id="loginModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+<div class="absolute inset-0 bg-black/50" onclick="toggleLogin()"></div>
+    <div class="relative bg-white w-full max-w-lg rounded-[2rem] p-10 shadow-2xl border border-zinc-100 font-['Roboto']">
+        <button onclick="toggleLogin()" class="absolute top-6 right-8 text-2xl text-zinc-800 hover:scale-110 transition-transform">
+            ✕
+        </button>
+
+        <div class="text-center mb-10">
+            <h2 class="text-5xl font-black tracking-tight text-zinc-900 uppercase">Login</h2>
+            <p class="text-zinc-500 text-lg mt-4">How do I started lorem Ipsum dolor At?</p>
+        </div>
+
+        <div class="space-y-4">
+            <input type="text" placeholder="Username" class="w-full bg-zinc-100 py-5 px-6 rounded-2xl outline-none focus:ring-2 focus:ring-[#FF7E67]/20">
+            <input type="password" placeholder="Password" class="w-full bg-zinc-100 py-5 px-6 rounded-2xl outline-none focus:ring-2 focus:ring-[#FF7E67]/20">
+            <button class="w-full bg-[#FF7E67] text-white py-4 rounded-2xl text-2xl font-bold shadow-lg shadow-orange-200">
+                Login
+            </button>
+        </div>
+
+        <div class="relative my-10 flex items-center justify-center">
+            <div class="absolute inset-x-0 h-px bg-zinc-200"></div>
+            <span class="relative bg-white px-4 text-sm text-zinc-400">or continue with</span>
+        </div>
+
+        <div class="space-y-4">
+      <button class="w-full bg-zinc-100 py-4 rounded-2xl flex items-center justify-center gap-4 font-bold text-zinc-800 hover:bg-zinc-200 transition-all">
+        <i class="bi bi-google text-xl text-red-500"></i> Continue with google
+      </button>
+
+      <button class="w-full bg-zinc-100 py-4 rounded-2xl flex items-center justify-center gap-4 font-bold text-zinc-800 hover:bg-zinc-200 transition-all">
+        <i class="bi bi-apple text-2xl"></i> Continue with Apple
+      </button>
+    </div>
+    </div>
+
+</div>
+
+<div id="userModal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/60" onclick="toggleUser()"></div>
+
+    <div class="relative bg-white w-full max-w-xl rounded-[2rem] overflow-hidden shadow-2xl z-[120]">
+        
+        <div class="w-full p-10 md:p-12 relative bg-white">
+            <button onclick="toggleUser()" class="absolute top-6 right-8 text-2xl text-zinc-800">✕</button>
+
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-light text-zinc-900 mb-2 font-['Roboto']">Welcome to</h2>
+                <h3 class="text-xl font-bold text-zinc-900 uppercase font-['Roboto']">Luxury Fashion World</h3>
+            </div>
+
+            <div class="space-y-6">
+                <p class="text-zinc-500 text-center text-lg font-['Roboto']">Please Enter Your Mobile Number</p>
+                
+                <div class="flex items-center bg-zinc-100 rounded-2xl p-2 border border-zinc-200">
+                    <div class="flex items-center px-4 gap-2 border-r border-zinc-300">
+                        <i class="bi bi-telephone text-xl text-zinc-400"></i>
+                        <span class="font-bold text-lg text-zinc-700 font-['Roboto']">+91</span>
+                    </div>
+                    <input type="text" placeholder="Mobile number" class="w-full bg-transparent py-4 px-6 outline-none text-lg">
+                </div>
+
+                <div class="text-right">
+                    <button class="text-zinc-900 font-bold hover:underline font-['Roboto']">Use E-Mail</button>
+                </div>
+<div class="text-zinc-500 text-[13px] space-y-2 leading-relaxed">
+                    <p class="font-['Roboto']">This site is protected by reCAPTCHA and the Google 
+                        <a href="#" class="underline">Privacy Policy</a> and <a href="#" class="underline">Terms of Service</a> apply.
+                    </p>
+                    <p class="font-['Roboto']">On Clicking Continue, I agree to 
+                        <a href="#" class="underline">Terms of Service</a> & <a href="#" class="underline">Privacy Policy</a>
+                    </p>
+                </div>
+                <button class="w-full bg-[#FF7E67] text-white py-4 rounded-2xl text-2xl font-bold shadow-lg shadow-orange-200 mt-6 font-['Roboto']">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--SIDE cart-->
+<div id="cartSidebar" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-[200] transform translate-x-full transition-transform duration-300 flex flex-col font-['Roboto']">
+    <div class="p-6 border-b flex justify-between items-center bg-zinc-900 text-white">
+        <h2 class="text-xl font-bold">Your Cart</h2>
+        <button onclick="toggleCart()" class="text-2xl hover:text-[#FF7E67]">✕</button>
+    </div>
+
+    <div id="sidebarItemList" class="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-50">
+        </div>
+
+    <div class="p-6 border-t bg-white">
+        <div class="flex justify-between font-bold text-xl mb-6">
+            <span>Total:</span>
+            <span id="sidebarTotal" class="text-[#FF7E67]">$0.00</span>
+        </div>
+        <button onclick="proceedToCheckout()" class="w-full bg-zinc-900 text-white py-4 rounded-xl font-bold">Checkout</button>
+    </div>
+</div>
+
+<div id="cartOverlay" class="fixed inset-0 bg-black/50 z-[190] hidden" onclick="toggleCart()"></div>
+</body>
+</html>
